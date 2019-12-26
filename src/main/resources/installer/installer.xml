@@ -1,0 +1,50 @@
+<config>
+    <item key="spring.datasource" name="数据库" description="">
+        <item key="spring.datasource.driver-class-name" name="驱动程序" editor="Select" description="">
+            <options>
+                <option key="oracle.jdbc.OracleDriver">OracleDriver</option>
+            </options>
+        </item>
+        <item key="spring.datasource.url" name="URL" editor="MonacoEditor" height="200" description=""/>
+        <item key="spring.datasource.username" name="用户名" editor="Input" description=""/>
+        <item key="spring.datasource.password" name="密码" editor="InputPassword" description=""/>
+        <item key="spring.datasource.hikari.maximum-pool-size" name="连接池大小" editor="Input" description=""></item>
+        <item key="spring.datasource.hikari.minimum-idle" name="最小空闲时间(S)" editor="Input" description=""/>
+        <item key="spring.datasource.hikari.connection-timeout" name="最大等待时间(S)" editor="Input" description=""/>
+    </item>
+    <item key="spring.data.elasticsearch" name="ElasticSearch" description="全文搜索引擎">
+        <item key="spring.data.elasticsearch.cluster-name" name="集群名称" editor="Input" description=""/>
+        <item key="spring.data.elasticsearch.cluster-nodes" name="节点" editor="Input" description=""/>
+    </item>
+    <item key="sie-message" name="消息推送" description="">
+        <item key="sie-message.mode" name="模式" description="" editor="Select">
+            <options>
+                <option key="direct">直接</option>
+                <option key="proxy">代理</option>
+            </options>
+        </item>
+        <item key="sie-message.config.type" name="推送方式" description=""
+              editor="Select">
+            <options>
+                <option key="Wechat">微信</option>
+                <option key="Dingtalk">钉钉</option>
+            </options>
+        </item>
+        <item key="sie-message.config.touser" name="接收者" description="多个接收者用|分割" editor="Input"/>
+        <item key="sie-message.config.wechat" name="微信配置" linkKey="sie-message.config.type" linkValue="Wechat"
+              description="">
+            <item key="sie-message.config.wechat.corpid" name="企业ID" description="" editor="Input"/>
+            <item key="sie-message.config.wechat.agentid" name="企业应用ID" description="" editor="Input"/>
+            <item key="sie-message.config.wechat.secret" name="企业应用密钥" description="" editor="InputGroup"/>
+        </item>
+        <item key="sie-message.config.dingtalk" name="钉钉配置" linkKey="sie-message.config.type" linkValue="Dingtalk"
+              description="">
+            <item key="sie-message.config.dingtalk.corp-id" name="企业ID" description="" editor="Input"/>
+            <item key="sie-message.config.dingtalk.corp-secret" name="企业密钥" description="" editor="Input"/>
+            <item key="sie-message.config.dingtalk.agentid" name="企业用ID" description="" editor="Input"/>
+        </item>
+        <item key="sie-message.config.proxy" linkKey="sie-message.mode" linkValue="proxy" name="代理配置" description="">
+            <item key="sie-message.config.proxy.url" name="地址" description="http://ip:port" editor="Input"/>
+        </item>
+    </item>
+</config>

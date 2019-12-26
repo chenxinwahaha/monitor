@@ -1,0 +1,59 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.98.165.198:3306/java_server?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 7235229
+    # 初始化连接数量
+    initialSize: 10
+    # 最大连接数
+    maxActive: 50
+    # 最大等待时间
+    maxWait: 10000
+  freemarker:
+    cache: false
+    template-loader-path: classpath:/templates/
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2048MB
+      file-size-threshold: 100MB
+
+sie-message:
+  mode: direct
+  config:
+    type: Wechat
+    touser: Xin|GeChangSong|ju-
+    wechat:
+      agentid: 1000027
+      corpid: ww8b7cbd6722c6d023
+      secret:
+        1000027: 8ez24SgyeaUTu92UXNeTqFkTZrS7D1WXPDuXfDbH1tg
+    dingtalk:
+      agentid: 171195050
+      corp-id: dinge102d9ce1124f54835c2f4657eb6378f
+      corp-secret: v1a1J0eYSRoASs90oq39Gsr8Y8pqdVCXAkVBM7P7igoOGzyCNxance3rjG5yvroz
+    proxy:
+      url: http://localhost:9001
+
+jfw:
+  is-dev: false
+  dev-server-port: 8000
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  typeAliasesPackage: com.sie.**.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: varchar
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+  session:
+    timeout: 0

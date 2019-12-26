@@ -1,0 +1,132 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
+    line-height: 1.5;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    color: white;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.left-img{
+    width: 39%;
+    height: 100%;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left-img img{
+    width: 100%;
+    position: absolute;
+}
+
+.img-center{
+    margin-top: 8%;
+}
+
+form {
+    width: 26.5%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 11%;
+    margin-top: -80px;
+    position: relative;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.input-group{
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon{
+    position: absolute;
+    z-index: 5;
+    left: 18px;
+    width: 18px;
+}
+
+input {
+    width: calc(100% - 54px);
+    padding-left: 54px;
+    font-size: 18px;
+    border-radius: 26px;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    height: 48px;
+    color: white;
+}
+
+::-webkit-input-placeholder{
+    color:rgba(255,255,255,0.9);
+}
+
+input:-webkit-autofill{
+    background: #d6d7d9!important;
+    color: red;
+}
+button {
+    background-color: #0086E9;
+    color: white;
+    height: 48px;
+    font-size: 20px;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    touch-action: manipulation;
+    border: none;
+    text-transform: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    border-radius: 26px;
+    margin-top: 10px;
+}
+
+button span{
+    margin-right: 40px;
+}
+button span:last-child{
+    margin: 0;
+}
+
+#error {
+    color: #d73435;
+    font-size: 14px;
+    position: absolute;
+    z-index: 5;
+    bottom: 58px;
+}
+

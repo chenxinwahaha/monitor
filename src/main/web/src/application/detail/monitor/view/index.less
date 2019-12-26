@@ -1,0 +1,258 @@
+.body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  .errorPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .show {
+    width: 100%;
+    min-height: calc(100% + 1px);
+    .topContent {
+      width: 100%;
+      height: 8rem;
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      .toHomeField {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .toHomeFieldLeft {
+          width: 45%;
+          display: flex;
+          justify-content: space-between;
+          .toHomeFont {
+            color: #3296FA;
+            font-size: 2.66rem;
+            font-family: PingFangSC-Regular;
+          }
+        }
+        .toHomeFieldRight {
+        }
+      }
+    }
+    .messageField {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: PingFangSC-Regular;
+      .messageContent {
+        width: 90%;
+        .messageLastRowContent {
+          height: 7.33rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .messageLastRowLeft {
+            color: #999999
+          }
+          .messageLastRowRight {
+            color: #333333;
+          }
+        }
+      }
+    }
+    .historyMessageField {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: PingFangSC-Regular;
+      .historyMessageContent {
+        width: 90%;
+        .lastSuccess {
+          height: 7.33rem;
+          border-bottom: 0.1rem solid #f0f0f0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .historyLeft {
+            display: flex;
+            width: 22%;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .historySuccessPoint {
+            width: 1.58rem;
+            height: 1.58rem;
+            background-color: #39b54a;
+            border-radius: 1rem;
+          }
+        }
+        .success {
+          height: 7.33rem;
+          border-bottom: 0.1rem solid #f0f0f0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .historyLeft {
+            display: flex;
+            width: 22%;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .historySuccessPoint {
+            width: 1.58rem;
+            height: 1.58rem;
+            background-color: #39b54a;
+            border-radius: 1rem;
+          }
+        }
+        .lastError {
+          height: 7.33rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .historyLeft {
+            display: flex;
+            width: 22%;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .historyErrorPoint {
+            width: 1.58rem;
+            height: 1.58rem;
+            background-color: #f81d22;
+            border-radius: 1rem;
+          }
+        }
+        .error {
+          height: 7.33rem;
+          border-bottom: 0.1rem solid #f0f0f0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .historyLeft {
+            display: flex;
+            width: 22%;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .historyErrorPoint {
+            width: 1.58rem;
+            height: 1.58rem;
+            background-color: #f81d22;
+            border-radius: 1rem;
+          }
+        }
+      }
+    }
+    .erratumField {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-family: PingFangSC-Regular;
+      .erratumContent {
+        width: 90%;
+        .exceptionRowContent {
+          height: auto;
+          display: flex;
+          align-items: center;
+          border-bottom: 0.1rem solid #f0f0f0;
+          .exceptionRow {
+            margin: 2rem 0;
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .exceptionRowLeft {
+              color: #999999
+            }
+            .exceptionRowRight {
+              margin-top: 2.275rem;
+              height: auto;
+              width: 100%;
+              color: #333333;
+              word-wrap: break-word;
+            }
+          }
+        }
+        .exceptionMessageDetailRowContent {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          .exceptionMessageDetailRow {
+            margin: 2rem 0;
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .exceptionDetailRowLeft {
+              color: #999999
+            }
+            .exceptionDetailRowRight {
+              font-size: larger;
+              height: auto;
+              color: #333333;
+              overflow-x: auto;
+            }
+          }
+        }
+      }
+    }
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      margin-top: 1.66rem;
+    }
+    .historyContent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      margin-top: 1.66rem;
+    }
+    .fieldTitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: PingFangSC-Medium;
+      height: 7.33rem;
+      font-size: 3.5rem;
+      color: #333333;
+      border-bottom: 0.1rem solid #f0f0f0;
+    }
+    .rowContent {
+      height: 7.33rem;
+      font-size: 2.83rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.1rem solid #f0f0f0;
+      .rowLeft {
+        color: #999999;
+      }
+      .rowRight {
+        color: #333333;
+      }
+    }
+  }
+  .mySpin {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

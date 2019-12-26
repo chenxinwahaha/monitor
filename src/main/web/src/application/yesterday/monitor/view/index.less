@@ -1,0 +1,102 @@
+.body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f3f3f3;
+  .errorPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .show {
+    width: 100%;
+    min-height: calc(100% + 1px);
+    .topContent {
+      width: 100%;
+      height: 8rem;
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      .toHomeField {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .toHomeFieldLeft {
+          width: 45%;
+          display: flex;
+          justify-content: space-between;
+          .toHomeFont {
+            color: #3296FA;
+            font-size: 2.66rem;
+            font-family: PingFangSC-Regular;
+          }
+        }
+        .toHomeFieldRight {
+        }
+      }
+    }
+    .field {
+      width: 100%;
+      background-color: white;
+      margin-top: 1.66rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .titleField {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: PingFangSC-Medium;
+        height: 7.33rem;
+        font-size: 3.5rem;
+        color: #333333;
+        border-bottom: 0.1rem solid #f0f0f0;
+        .title {
+          width: 90%;
+          display: flex;
+          .imgField {
+            padding-right: 1.5rem;
+          }
+        }
+      }
+      .contentField {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: PingFangSC-Regular;
+        .content {
+          width: 90%;
+          .rowContent {
+            height: 7.33rem;
+            font-size: 2.83rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0.1rem solid #f0f0f0;
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mySpin {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

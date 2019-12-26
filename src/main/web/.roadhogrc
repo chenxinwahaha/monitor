@@ -1,0 +1,82 @@
+{
+  "entry": "src/application/app/*.js",
+  "outputPath": "../resources/static/dist",
+  "publicPath": "dist/",
+  "theme": {
+     "@primary-color": "#0085E8",
+     "@border-color-base":"hsv(0, 0, 85%)",
+     "@main-color":"#2663bc",
+     "@border-radius-base": "4px",
+     "@btn-border-radius-base":"3px",
+     "@btn-border-radius-sm":"3px",
+     "@button-border-radius":"4px",
+     "@second-color":"#5b9ee5",
+     "@border-color":"#d9d9d9",
+     "@primary-item-color":"purple",
+     "@icon-url": "/fonts/iconfont"
+  },
+ "env": {
+     "development": {
+       "extraBabelPlugins": [
+         "dva-hmr",
+         "transform-runtime",
+         ["module-resolver", {
+                               "alias": {
+                                 "dva": "dva-react-router-3",
+                                 "common": "./src/application/pc/framework/common",
+                                 "components": "./src/application/pc/framework/components"
+                               }
+                             }],
+         "transform-decorators-legacy",
+         [
+           "import",
+           {
+             "libraryName": "antd",
+             "style": true
+           },
+           { "libraryName": "antd-mobile", "style": true }
+         ]
+       ]
+     },
+     "production": {
+         "extraBabelPlugins": [
+           "transform-runtime",
+           "transform-decorators-legacy",
+           ["module-resolver", {
+                              "alias": {
+                                "dva": "dva-react-router-3",
+                               "common": "./src/application/pc/framework/common",
+                                "components": "./src/application/pc/framework/components"
+                              }
+                            }],
+           [
+             "import",
+             {
+               "libraryName": "antd",
+               "style": true
+             }
+           ]
+         ]
+       },
+       "env": {
+         "development": {
+           "extraBabelPlugins": [
+             "dva-hmr"
+           ]
+         }
+       },
+        "xdllPlugin": {
+           "exclude": [
+             "babel-runtime"
+           ],
+           "include": [
+             "dva/router",
+             "dva/saga",
+             "dva/fetch"
+           ]
+         }
+   }
+}
+
+
+
