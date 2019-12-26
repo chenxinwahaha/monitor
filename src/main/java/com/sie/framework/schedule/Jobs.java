@@ -54,7 +54,7 @@ public class Jobs {
      *
      * @throws Exception
      */
-    @Scheduled(cron = "30 0/1 * * * ? ")
+    @Scheduled(cron = "0 0 0/1 * * ? ")
     public void scheduledNodeInfoTask() throws Exception {
         taskScheduleService.queryNode();
     }
