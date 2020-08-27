@@ -36,26 +36,26 @@ public class Jobs {
     /**
      * docker监控
      */
-    @Scheduled(cron = "0 0 9 * * ? ")
-    public void scheduledMonitorDocker() {
-        dockerScheduleService.connectSieInstallations();
-    }
+//    @Scheduled(cron = "0 0 9 * * ? ")
+//    public void scheduledMonitorDocker() {
+//        dockerScheduleService.connectSieInstallations();
+//    }
 
     /**
      * linux监控 LinuxScheduleService
      */
-    @Scheduled(cron = "0 0 9 * * ? ")
-    public void scheduledLinuxMonitor() {
-        linuxScheduleService.connectSieInstallations();
-    }
+//    @Scheduled(cron = "0 0 9 * * ? ")
+//    public void scheduledLinuxMonitor() {
+//        linuxScheduleService.connectSieInstallations();
+//    }
 
     /**
      * 节点
      *
      * @throws Exception
      */
-    @Scheduled(cron = "0 0 0/1 * * ? ")
-    public void scheduledNodeInfoTask() throws Exception {
-        taskScheduleService.queryNode();
-    }
+//    @Scheduled(cron = "0 0 0/1 * * ? ")
+//    public void scheduledNodeInfoTask() throws Exception {
+//        taskScheduleService.queryNode();
+//    }
 }

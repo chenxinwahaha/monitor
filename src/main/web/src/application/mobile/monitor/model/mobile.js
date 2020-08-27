@@ -105,17 +105,7 @@ export default {
     //全部交易量的折线图数据
     * queryTransactionByDate({payload}, {call, put}) {
       const {data} = yield call(service.queryTransactionByDate, payload)
-      switch (payload.type) {
-        case 1:
-          yield put({type: 'setState', payload: {todayTransactionInfo: null !== data.payload ? data.payload : []}})
-          break
-        case 2:
-          yield put({type: 'setState', payload: {yesterdayTransactionInfo: null !== data.payload ? data.payload : []}})
-          break
-        case 3:
-          yield put({type: 'setState', payload: {thisWeekTransactionInfo: null !== data.payload ? data.payload : []}})
-          break
-      }
+      yield put({type: 'setState', payload: {monitorList: data.payload}})
     },
     * monitorNode({}, {call, put}) {
       const {data} = yield call(service.monitorNode)

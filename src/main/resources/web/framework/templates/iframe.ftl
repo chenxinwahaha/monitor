@@ -8,8 +8,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <link href="dist/mobile.css?t=${time}" rel="stylesheet"/>
-    <link rel="icon" type="image/x-icon" href="framework/img/smallIcon.png">
-    <title>天枢监控中心</title>
+<#--    <link rel="icon" type="image/x-icon" href="framework/img/smallIcon.png">-->
+    <title>蜻蜓设备监控中心</title>
     <style>
         html, body {
             height: 100%;

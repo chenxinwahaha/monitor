@@ -44,14 +44,14 @@ public class IndexController {
     @Value("${jfw.dev-server-port}")
     private int port;
 
-    @RequestMapping("/")
+    @RequestMapping("/mobile")
     public String index(HttpSession session, Model model) {
         model.addAttribute("time", time);
         model.addAttribute("jsPath", getIndexPath(isDev, port));
         return "index";
     }
 
-    @RequestMapping("/mobile")
+    @RequestMapping("/")
     public String mobileIndex(HttpSession session, Model model) {
         model.addAttribute("time", time);
         model.addAttribute("jsPath", getMobileIndexPath(isDev, port));

@@ -10,14 +10,14 @@ class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      selected: 'homePage'
+      selected: 'iot'
     }
   }
 
   componentDidMount() {
     const {dispatch} = this.props
     dispatch(routerRedux.push({
-      pathname: 'homePage',
+      pathname: 'iot',
       query: {},
     }));
   }
@@ -41,25 +41,25 @@ class Index extends Component {
           {this.props.children}
         </div>
         <div className={styles.bottom}>
-          <div className={styles.botton} onClick={() => this.clickBotton('homePage')}>
+          <div className={styles.botton} onClick={() => this.clickBotton('iot')}>
             <img
               className={styles.img}
-              src={selected == 'homePage' ? "application/mobile/botton/homePage_selected.svg" : "application/mobile/botton/homePage.svg"}/>
-            <div className={selected == 'homePage' ? styles.textSelected : styles.text}>首页</div>
+              src={selected == 'iot' ? "application/mobile/botton/homePage_selected.svg" : "application/mobile/botton/homePage.svg"}/>
+            <div className={selected == 'iot' ? styles.textSelected : styles.text}>首页</div>
           </div>
-          <div className={styles.botton} onClick={() => this.clickBotton('message')}>
+          <div className={styles.botton} >
             <img
               className={styles.img}
               src={selected == 'message' ? "application/mobile/botton/new_selected.png" : "application/mobile/botton/new.png"}/>
             <div className={selected == 'message' ? styles.textSelected : styles.text}>消息</div>
           </div>
-          <div className={styles.botton} onClick={() => this.clickBotton('node')}>
-            <img
-              className={styles.img}
-              src={selected == 'node' ? "application/mobile/botton/node_selected.png" : "application/mobile/botton/node.png"}/>
-            <div className={selected == 'node' ? styles.textSelected : styles.text}>节点</div>
-          </div>
-          <div className={styles.botton} onClick={() => this.clickBotton('app')}>
+          {/*<div className={styles.botton} onClick={() => this.clickBotton('node')}>*/}
+          {/*  <img*/}
+          {/*    className={styles.img}*/}
+          {/*    src={selected == 'node' ? "application/mobile/botton/node_selected.png" : "application/mobile/botton/node.png"}/>*/}
+          {/*  <div className={selected == 'node' ? styles.textSelected : styles.text}>节点</div>*/}
+          {/*</div>*/}
+          <div className={styles.botton}>
             <img
               className={styles.img}
               src={selected == 'app' ? "application/mobile/botton/app_selected.png" : "application/mobile/botton/app.png"}/>

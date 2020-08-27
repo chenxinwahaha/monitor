@@ -135,7 +135,7 @@ public class NodeService extends ServiceImpl<SieNodeMapper, SieNode> {
         String url = "http://" + node.getIp() + ":" + node.getPort();
         try {
             String value = HttpKit.get(url, null, 5);
-            map.put("value", JSONObject.parse(value));
+//            map.put("value", JSONObject.parse(value));
             return map;
         } catch (Exception e) {
             map.put("error", "节点异常");

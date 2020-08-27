@@ -14,23 +14,25 @@ import PushQueue from './monitor/view/app/PushQueue/index'
 import HomePage from './monitor/view/homePage/index'
 import TransactionDetail from './monitor/view/homePage/transactionDetail/index'
 import TransactionDetailFoldLine from './monitor/view/homePage/transactionDetailFoldLine/index'
+import Iot from './monitor/view/Iot/index'
 
 function RouterConfig({history}) {
   return (
     <Router history={history}>
       <Route path="/" component={Index}>
         <Route path="/info" component={Info}/>
-        <Route path="/message" component={Message}/>
-        <Route path="/app" component={App}/>
-        <Route path="/node" component={Node}/>
-        <Route path="/homePage" component={HomePage}/>
-        <Route path="/transactionDetail" component={TransactionDetail}/>
-        <Route path="/transactionDetailFoldLine" component={TransactionDetailFoldLine}/>
-        <Route path="/timingOperation" component={TimingOperation}/>
-        <Route path="/integratedFlow" component={IntegratedFlow}/>
-        <Route path="/publishQueue" component={PublishQueue}/>
-        <Route path="/pushQueue" component={PushQueue}/>
-        <Route path="/errorList" component={ErrorList}/>
+        {/*<Route path="/message" component={Message}/>*/}
+        {/*<Route path="/app" component={App}/>*/}
+        {/*<Route path="/node" component={Node}/>*/}
+        {/*<Route path="/homePage" component={HomePage}/>*/}
+        {/*<Route path="/transactionDetail" component={TransactionDetail}/>*/}
+        {/*<Route path="/transactionDetailFoldLine" component={TransactionDetailFoldLine}/>*/}
+        {/*<Route path="/timingOperation" component={TimingOperation}/>*/}
+        {/*<Route path="/integratedFlow" component={IntegratedFlow}/>*/}
+        {/*<Route path="/publishQueue" component={PublishQueue}/>*/}
+        {/*<Route path="/pushQueue" component={PushQueue}/>*/}
+        {/*<Route path="/errorList" component={ErrorList}/>*/}
+        <Route path="/iot" component={Iot}/>
       </Route>
     </Router>
   )

@@ -28,9 +28,9 @@ export default class Info extends Component {
           <div className={style.avatar}>
             <div className={style.again}>
               <div className={style.circle}>
-                <img src="./framework/img/smallIcon.png" className={style.img2}/>
+              <img src="./framework/img/zlogo.png" className={style.img2}/>
               </div>
-              <span className={style.name}>天枢</span>
+              <span className={style.name}>智会行</span>
             </div>
           </div>
         </div>
