@@ -61,6 +61,10 @@ export async function queryTransactionByDateAndField(payload) {
   return axios.post('/transaction/queryTransactionByDateAndField', payload)
 }
 
+export async function selectIotBoxListByOrg() {
+  return axios.post('/transaction/selectIotBoxListByOrg')
+}
+
 
 
 

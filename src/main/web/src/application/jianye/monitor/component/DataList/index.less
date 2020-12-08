@@ -1,0 +1,49 @@
+.total {
+  width: 100%;
+  height: 15.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  .content {
+    width: 100%;
+    height: 100%;
+    border-bottom: 0.2rem solid #eeeeee;
+    display: flex;
+    align-items: center;
+    .picture {
+      //width: 7.5rem;
+      //height: 7.5rem;
+    }
+    .rightContent {
+      width: calc(~"100% - 10.5rem");
+      height: 10rem;
+      margin-left: 2.5rem;
+      .top {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .name {
+          color: #333333;
+          width: 70%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .bottom {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .current {
+          color: #999999;
+        }
+        .time {
+          color: #999999;
+        }
+      }
+    }
+  }
+}

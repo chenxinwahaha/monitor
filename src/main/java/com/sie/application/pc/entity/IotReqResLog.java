@@ -1,7 +1,6 @@
 package com.sie.application.pc.entity;
 
 
-
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
@@ -110,12 +109,43 @@ public class IotReqResLog extends Model<IotReqResLog> {
 
     @TableField(exist = false)
     private String num;
+    @TableField(exist = false)
+    private String iot;
+    @TableField(exist = false)
+    private String mini;
+    @TableField(exist = false)
+    private String wg;
+
+    public String getWg() {
+        return wg;
+    }
+
+    public void setWg(String wg) {
+        this.wg = wg;
+    }
+
     /**
-     *  自己的
+     * 自己的
      */
     @Override
     protected Serializable pkVal() {
         return null;
+    }
+
+    public String getIot() {
+        return iot;
+    }
+
+    public void setIot(String iot) {
+        this.iot = iot;
+    }
+
+    public String getMini() {
+        return mini;
+    }
+
+    public void setMini(String mini) {
+        this.mini = mini;
     }
 
     public Long getId() {

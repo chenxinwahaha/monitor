@@ -1,0 +1,114 @@
+.total {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  .title {
+    width: 100%;
+    height: 30%;
+    background-color: @primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .countInfo {
+      width: 100%;
+      height: 13rem;
+      .num {
+        font-size: 10rem;
+        color: #ffffff;
+        width: 100%;
+        height: 7.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .info {
+        font-size: 3rem;
+        color: #ffffff;
+        width: 100%;
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    height: 70%;
+    .data {
+      width: 100%;
+      height: 12.6rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      .info {
+        width: 100%;
+        height: 100%;
+        border-bottom: 0.2rem solid #f5f5f5;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .left {
+          width: 20%;
+          height: 8rem;
+          border-right: 0.2rem solid #f5f5f5;
+          .date {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+          }
+        }
+        .right {
+          width: 80%;
+          height: 10rem;
+          padding-right: 2rem;
+          display: flex;
+          flex-direction: row;
+          font-size: 3rem;
+          .data {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            .node {
+              color: @primary-color;
+              margin-right: 1rem;
+            }
+            .exception {
+              width: 100%;
+              white-space: normal;
+              font-size: 28px;
+              word-wrap: break-word;
+              word-break: break-all;
+              overflow: hidden;
+              //text-overflow: ellipsis;
+              //overflow-x: hidden;
+              //word-break:break-all
+            }
+            .message {
+              word-break: break-all;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.errorPage {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -58,6 +58,13 @@ public class IndexController {
         return "iframe";
     }
 
+    @RequestMapping("/jianye")
+    public String jianye(HttpSession session, Model model) {
+        model.addAttribute("time", time);
+        model.addAttribute("jsPath", getjianyeIndexPath(isDev, port));
+        return "jianye";
+    }
+
     @RequestMapping("/detail/{id}")
     public String detailIndex(@PathVariable("id") String id, HttpSession session, Model model) {
         try {
@@ -102,6 +109,14 @@ public class IndexController {
             return "http://localhost:" + port + "/mobile.js";
         } else {
             return "../dist/mobile.js?k=" + time;
+        }
+    }
+
+    private String getjianyeIndexPath(boolean isDev, int port) {
+        if (isDev) {
+            return "http://localhost:" + port + "/jianye.js";
+        } else {
+            return "../dist/jianye.js?k=" + time;
         }
     }
 

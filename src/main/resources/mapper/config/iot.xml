@@ -5,6 +5,13 @@
             select count(organizer) num,organizer from iot_req_res_log group by organizer;
     </select>
     <select id="queryIotListByDate" resultType="com.sie.application.pc.entity.IotReqResLog">
-            select count(organizer) num,organizer from iot_req_res_log where create_time between #{b} and #{e} group by organizer;
+            select count(organizer) num,organizer,COUNT(IF(verifier_type='1',verifier_type,NULL)) iot,
+COUNT(IF(verifier_type='2',verifier_type,NULL)) mini,COUNT(IF(verifier_type='3',verifier_type,NULL)) wg from iot_req_res_log where create_time between #{b} and #{e} group by organizer order by num desc;
+    </select>
+
+    <select id="selectIotBoxListByOrg" resultType="com.sie.application.pc.entity.IotReqResLog">
+        select u.user_name organizer,count(*) num from iot_orgbox o
+        left join iot_box b on o.box_id = b.id
+        left join sys_user u on o.org_user_id = u.user_id group by u.user_name asc
     </select>
 </mapper>

@@ -47,6 +47,12 @@ class Index extends Component {
               src={selected == 'iot' ? "application/mobile/botton/homePage_selected.svg" : "application/mobile/botton/homePage.svg"}/>
             <div className={selected == 'iot' ? styles.textSelected : styles.text}>首页</div>
           </div>
+          <div className={styles.botton} onClick={() => this.clickBotton('app')}>
+            <img
+              className={styles.img}
+              src={selected == 'app' ? "application/mobile/botton/app_selected.png" : "application/mobile/botton/app.png"}/>
+            <div className={selected == 'app' ? styles.textSelected : styles.text}>设备</div>
+          </div>
           <div className={styles.botton} >
             <img
               className={styles.img}
@@ -59,12 +65,7 @@ class Index extends Component {
           {/*    src={selected == 'node' ? "application/mobile/botton/node_selected.png" : "application/mobile/botton/node.png"}/>*/}
           {/*  <div className={selected == 'node' ? styles.textSelected : styles.text}>节点</div>*/}
           {/*</div>*/}
-          <div className={styles.botton}>
-            <img
-              className={styles.img}
-              src={selected == 'app' ? "application/mobile/botton/app_selected.png" : "application/mobile/botton/app.png"}/>
-            <div className={selected == 'app' ? styles.textSelected : styles.text}>应用</div>
-          </div>
+
           <div className={styles.botton} onClick={() => this.clickBotton('info')}>
             <img
               className={styles.img}

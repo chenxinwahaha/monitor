@@ -1,0 +1,94 @@
+.total{
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  border-bottom: 0.2rem solid #efefef;
+  border-top: 0.2rem solid #efefef;
+  height:auto;
+  .title{
+    width: 100%;
+    height: 10rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    .content{
+      width: 100%;
+      height: 100%;
+      border-bottom:0.2rem solid #f0f0f0 ;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left{
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        img{
+          width: 2.8rem;
+          margin-bottom: -0.2rem;
+        }
+        .node{
+          margin-left: 2rem;
+          font-size: 3rem;
+          color: #333333;
+        }
+      }
+      .right{
+        width: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        .count{
+          color: #999999;
+          font-size: 2.2rem;
+        }
+        .number{
+          margin-left: 2rem;
+          color: @primary-color;
+          font-size: 3rem;
+          margin-right: 2.8rem;
+        }
+      }
+    }
+  }
+  .lineBars{
+    width: 100%;
+    height: auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: space-between;
+    background-color: #ffffff;
+    .data{
+      width: 18rem;
+      height:23rem;
+      display: flex;
+      flex-direction: column;
+      //margin-right: 5rem;
+      position: relative;
+      .name{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .percent{
+        width: 17.8rem;
+        height:17.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.4rem;
+        position:absolute;
+      }
+    }
+
+  }
+
+
+}
+

@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.sie.application.pc.entity.IotBox;
 import com.sie.application.pc.entity.IotReqResLog;
 import com.sie.application.pc.entity.SieNode;
 import com.sie.application.pc.mapper.IotReqMapper;
@@ -50,10 +51,19 @@ public class IotReqService extends ServiceImpl<IotReqMapper, IotReqResLog> {
                 beforeDate = getBeginDayOfWeek();
                 list = iotReqMapper.queryIotListByDate(beforeDate, new Date());
                 break;
+            case 4:
+                //本月
+                beforeDate = getBeginDayOfMonth();
+                list = iotReqMapper.queryIotListByDate(beforeDate, new Date());
+                break;
             default:
                 break;
         }
         return list;
+    }
+
+    public List<IotReqResLog> selectIotBoxListByOrg() {
+        return iotReqMapper.selectIotBoxListByOrg();
     }
 
     public Date getTimesmorning() {
@@ -97,6 +107,18 @@ public class IotReqService extends ServiceImpl<IotReqMapper, IotReqResLog> {
             dayofweek += 7;
         }
         cal.add(Calendar.DATE, 2 - dayofweek);
+        return cal.getTime();
+    }
+
+
+    public Date getBeginDayOfMonth(){
+        Date date = getTimesmorning();
+        if (date == null) {
+            return null;
+        }
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.set(Calendar.DAY_OF_MONTH, 1);
         return cal.getTime();
     }
 }

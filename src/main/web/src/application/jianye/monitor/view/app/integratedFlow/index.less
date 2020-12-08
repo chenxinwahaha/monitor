@@ -1,0 +1,71 @@
+.head {
+  height: 100%;
+  width: 100%;
+  .select {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    padding-top: 0rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.2rem solid #eaeaea;
+
+    .node {
+      width: 15rem;
+      height: 5rem;
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3rem;
+      font-size: 2.4rem;
+      color: #646464;
+      border-radius: 0.5rem;
+      margin-left: 2rem;
+    }
+    .nodeSelect {
+      width: 15rem;
+      height: 5rem;
+      background-color: lighten(@primary-color, 50%);
+      color: @primary-color;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3rem;
+      font-size: 2.4rem;
+      border-radius: 0.5rem;
+      margin-left: 2rem;
+    }
+
+  }
+  .first {
+    height: 30%;
+    .img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .data {
+    width: 100%;
+    overflow-y: auto;
+  }
+}
+
+.errorPage {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
