@@ -84,29 +84,28 @@ class Iot extends Component {
                   className={styles.totalSpan}></span>
                 </div>
               </div>
-
               <div className={styles.unNormal}>
                 <div className={styles.transactionDiv} style={{color: 'blue'}}>{value.num}<span
                   className={styles.errorSpan}></span>
                 </div>
               </div>
-              <div className={styles.unNormal}>
-                <div className={styles.transactionDiv} style={{color: 'green'}}>{value.mini}<span
-                  className={styles.errorSpan}></span>
-                </div>
-              </div>
+              {/*<div className={styles.unNormal}>*/}
+              {/*  <div className={styles.transactionDiv} style={{color: 'green'}}>{value.mini}<span*/}
+              {/*    className={styles.errorSpan}></span>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
 
-              <div className={styles.unNormal}>
-                <div className={styles.transactionDiv} style={{color: 'cornflowerblue'}}>{value.iot}<span
-                  className={styles.errorSpan}></span>
-                </div>
-              </div>
+              {/*<div className={styles.unNormal}>*/}
+              {/*  <div className={styles.transactionDiv} style={{color: 'cornflowerblue'}}>{value.iot}<span*/}
+              {/*    className={styles.errorSpan}></span>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
 
-              <div className={styles.unNormal}>
-                <div className={styles.transactionDiv} style={{color: 'grey'}}>{value.wg}<span
-                  className={styles.errorSpan}></span>
-                </div>
-              </div>
+              {/*<div className={styles.unNormal}>*/}
+              {/*  <div className={styles.transactionDiv} style={{color: 'grey'}}>{value.wg}<span*/}
+              {/*    className={styles.errorSpan}></span>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
           </div>
         )
@@ -194,21 +193,21 @@ class Iot extends Component {
                   </div>
                 </div>
 
-                <div className={styles.unNormal}>
-                  <div className={styles.transactionDiv}>小程序<span
-                    className={styles.errorSpan}></span>
-                  </div>
-                </div>
-                <div className={styles.unNormal}>
-                  <div className={styles.transactionDiv}>刷脸设备<span
-                    className={styles.errorSpan}></span>
-                  </div>
-                </div>
-                <div className={styles.unNormal}>
-                  <div className={styles.transactionDiv}>微光盒子<span
-                    className={styles.errorSpan}></span>
-                  </div>
-                </div>
+                {/*<div className={styles.unNormal}>*/}
+                {/*  <div className={styles.transactionDiv}>小程序<span*/}
+                {/*    className={styles.errorSpan}></span>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
+                {/*<div className={styles.unNormal}>*/}
+                {/*  <div className={styles.transactionDiv}>刷脸设备<span*/}
+                {/*    className={styles.errorSpan}></span>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
+                {/*<div className={styles.unNormal}>*/}
+                {/*  <div className={styles.transactionDiv}>微光盒子<span*/}
+                {/*    className={styles.errorSpan}></span>*/}
+                {/*  </div>*/}
+                {/*</div>*/}
               </div>
             </div>
             {monitorList && monitorList.length ? this.renderNode(monitorList) : ''}
