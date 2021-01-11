@@ -17,6 +17,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -26,12 +28,12 @@ public class IotReqService extends ServiceImpl<IotReqMapper, IotReqResLog> {
     @Autowired
     IotReqMapper iotReqMapper;
 
-    public List<IotReqResLog> queryIotList(){
+    public List<IotReqResLog> queryIotList() {
         return iotReqMapper.queryIotList();
     }
 
 
-    public List<IotReqResLog> queryIotListByDate(Integer type){
+    public List<IotReqResLog> queryIotListByDate(Integer type) {
         List<IotReqResLog> list = new ArrayList<>();
         Date beforeDate = getTimesmorning();
         Date afterDate = getTimesevening();
@@ -54,6 +56,16 @@ public class IotReqService extends ServiceImpl<IotReqMapper, IotReqResLog> {
             case 4:
                 //本月
                 beforeDate = getBeginDayOfMonth();
+                list = iotReqMapper.queryIotListByDate(beforeDate, new Date());
+                break;
+            case 5:
+                //全部
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                try {
+                    beforeDate = sdf.parse("2019-01-01");
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
                 list = iotReqMapper.queryIotListByDate(beforeDate, new Date());
                 break;
             default:
@@ -111,7 +123,7 @@ public class IotReqService extends ServiceImpl<IotReqMapper, IotReqResLog> {
     }
 
 
-    public Date getBeginDayOfMonth(){
+    public Date getBeginDayOfMonth() {
         Date date = getTimesmorning();
         if (date == null) {
             return null;

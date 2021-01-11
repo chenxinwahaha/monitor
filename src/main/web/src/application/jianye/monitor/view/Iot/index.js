@@ -42,6 +42,8 @@ class Iot extends Component {
       dispatch({type: 'mobile/queryTransactionByDate', payload: {"type": 3}})
     } else if ("本月" == homepageSelectDate) {
       dispatch({type: 'mobile/queryTransactionByDate', payload: {"type": 4}})
+    } else if ("全部" == homepageSelectDate) {
+      dispatch({type: 'mobile/queryTransactionByDate', payload: {"type": 5}})
     }
   }
 
@@ -70,6 +72,8 @@ class Iot extends Component {
       dispatch({type: 'mobile/queryTransactionByDate', payload: {"type": 3}})
     } else if ("本月" == opt.props.value) {
       dispatch({type: 'mobile/queryTransactionByDate', payload: {"type": 4}})
+    } else if ("全部" == opt.props.value) {
+      dispatch({type: 'mobile/queryTransactionByDate', payload: {"type": 5}})
     }
   };
 
@@ -164,6 +168,13 @@ class Iot extends Component {
                                borderBottom: '1px solid #d9d9d9',
                                justifyContent: 'center'
                              }}>本月</Item>),
+                             (<Item key="8" value="全部" style={{
+                               fontSize: '3rem', height: '8rem',
+                               display: 'flex',
+                               alignItems: 'center',
+                               borderBottom: '1px solid #d9d9d9',
+                               justifyContent: 'center'
+                             }}>全部</Item>),
                            ]}
                            align={{
                              overflow: {adjustY: 0, adjustX: 0},
@@ -183,7 +194,7 @@ class Iot extends Component {
             <div className={styles.transaction}>
               <div className={styles.transactionContent}>
                 <div className={styles.total}>
-                  <div className={styles.totalTransaction}>主办单位<span
+                  <div className={styles.totalTransaction}>卡点位置<span
                     className={styles.totalSpan}></span>
                   </div>
                 </div>
