@@ -23,7 +23,7 @@
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.1.1",
     "react-markdown": "^3.3.0",
-    "sockjs": "^0.3.19"
+    "sockjs": "^0.3.20"
   },
   "devDependencies": {
     "@antv/data-set": "^0.8.5",
